@@ -3,13 +3,17 @@
 
 <head>
     <!-- HTML Meta Tags -->
-    <title>Roman numeral Converter | freeCodeCamp</title> <!-- ! -->
-    <meta name="description" content="This is a Roman numeral converter, a freecodecamp assignment."> <!-- ! -->
+    <title>Pokemon Search | freeCodeCamp</title>
+    <meta name="description" content="This is a Pokemon Search App, a freecodecamp assignment.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/main.css">
     <!-- fonts -->
-    <!-- ! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="public/favicon/favicon-32x32.png">
@@ -20,31 +24,137 @@
     <meta name="theme-color" content="#ffffff">
     <!-- apple -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Roman numeral Converter"> <!-- ! -->
+    <meta name="apple-mobile-web-app-title" content="Pokemon Search App">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- OG social media -->
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://fedehide.github.io/roman-numeral-converter/"> <!-- ! -->
+    <meta property="og:url" content="https://fedehide.github.io/pokemon-search/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Roman numeral Converter | freeCodeCamp"> <!-- ! -->
-    <meta property="og:description" content="This is a Roman numeral converter, a freecodecamp assignment."> <!-- ! -->
-    <meta property="og:site_name" content="Roman numeral Converter | freeCodeCamp"> <!-- ! -->
+    <meta property="og:title" content="Pokemon Search App | freeCodeCamp">
+    <meta property="og:description" content="This is a Pokemon Search App, a freecodecamp assignment.">
+    <meta property="og:site_name" content="Pokemon Search App | freeCodeCamp">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="/public/images/roman-numeral-converter-screenshot.webp"> <!-- ! -->
+    <meta property="og:image" content="/public/images/pokemon-search-screenshot.webp">
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="fedehide.github.io"> <!-- ! -->
-    <meta property="twitter:url" content="https://fedehide.github.io/roman-numeral-converter/"> <!-- ! -->
-    <meta name="twitter:title" content="Roman numeral Converter | freeCodeCamp"> <!-- ! -->
-    <meta name="twitter:description" content="This is a Roman numeral converter, a freecodecamp assignment."> <!-- ! -->
-    <meta name="twitter:image" content="/public/images/roman-numeral-converter-screenshot.webp"> <!-- ! -->
+    <meta property="twitter:domain" content="fedehide.github.io">
+    <meta property="twitter:url" content="https://fedehide.github.io/pokemon-search/">
+    <meta name="twitter:title" content="Pokemon Search App | freeCodeCamp">
+    <meta name="twitter:description" content="This is a Pokemon Search App, a freecodecamp assignment.">
+    <meta name="twitter:image" content="/public/images/pokemon-search-screenshot.webp">
     <!-- meta tags -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="FedeHide">
-    <meta name="keywords" content="Roman numeral Converter"> <!-- ! -->
+    <meta name="keywords" content="Pokemon Search App">
 </head>
 
 <body>
+    <header class="header">
+        <h1 class="header__title">PokeDex</h1>
+    </header>
+
+    <main class="main">
+        <section class="input-container">
+            <input id="search-input" class="input-container__search" type="text" placeholder="Search pokemon by name"
+                required>
+            <button id="search-button" class="input-container__btn"></button>
+        </section>
+        <section class="data-container">
+            <div id="sprite" class="data-container__sprite-container"></div>
+            <div class="data-container__info info">
+                <h3 class="info__name" id="pokemon-name"></h3>
+                <p class="info__id" id="pokemon-id"></p>
+                <div class="info__bar"></div>
+            </div>
+            <div class="data-container__physical">
+                <div class="data-container__types-wrapper">
+                    <p class="data-container__types" id="types"></p>
+                    <p class="data-container__types-title">Type</p>
+                </div>
+                <div class="data-container__weight-wrapper">
+                    <p class="data-container__weight" id="weight"></p>
+                    <p class="data-container__weight-title">Type</p>
+                </div>
+                <div class="data-container__height-wrapper">
+                    <p class="data-container__height" id="height"></p>
+                    <p class="data-container__height-title">Type</p>
+                </div>
+            </div>
+            <table class="data-container__stats stats">
+                <tbody>
+                    <tr>
+                        <th>HP</th>
+                        <td class="stats__cell-num" id="hp"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Attack</th>
+                        <td class="stats__cell-num" id="attack"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Defense</th>
+                        <td class="stats__cell-num" id="defense"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Sp. Atk</th>
+                        <td class="stats__cell-num" id="special-attack"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Sp. Def</th>
+                        <td class="stats__cell-num" id="special-defense"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Speed</th>
+                        <td class="stats__cell-num" id="speed"></td>
+                        <td class="cell-barchart">
+                            <div class="barchart-bar"></div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td class="stats__cell-num" id="total"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <p class="footer__text">This is a <a href="https://www.freecodecamp.org/learn/"
+                    target="_blank">freeCodeCamp</a>
+                assignment.</p>
+            <p>Copyright &copy; 2024 by FedeHide. MIT license.</p>
+        </div>
+        <div class="footer__contact">
+            <h4 class="footer__contact-title">CONTACT</h4>
+            <div class="footer__social">
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+    </footer>
     <script defer src="dist/js/main.js"></script>
 </body>
 

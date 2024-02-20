@@ -1,6 +1,6 @@
-# Title
+# Pokemon Search
 
-### Check the site [Here](https://fedehide.github.io/endpoint " alt")
+### Check the site [Here](https://fedehide.github.io/pokemon-search " Pokemon Search")
 
 ------------
 
@@ -8,7 +8,7 @@
 
 ## Features
 
-- 🔢 Features
+- 🦖 Pokemon Search app with typescript and sass.
 
 ## Contribution
 

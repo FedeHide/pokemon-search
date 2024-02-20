@@ -1,31 +1,29 @@
 {
-    "name": "template",
-    "version": "0.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint src/ts/**/*.ts",
-        "watch-sass": "nodemon -e scss -x \"sass src/scss/main.scss dist/css/main.css\"",
-        "watch-ts": "tsc -w"
-    },
-    "keywords": [],
-    "author": {
-        "name": "@FedeHide"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^6.4.0",
-        "eslint": "^8.0.1",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-config-standard-with-typescript": "^43.0.1",
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
-        "eslint-plugin-promise": "^6.0.0",
-        "node-sass": "^9.0.0",
-        "nodemon": "^3.0.3",
-        "prettier": "^3.2.5",
-        "sass": "^1.71.0",
-        "typescript": "*"
-    }
+	"name": "pokemon-search",
+	"version": "0.1.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint src/ts/**/*.ts",
+		"watch-sass": "nodemon -e scss -x \"sass src/scss/main.scss dist/css/main.css\"",
+		"watch-ts": "tsc -w"
+	},
+	"keywords": [],
+	"author": {
+		"name": "@FedeHide"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "7.0.2",
+		"eslint": "8.56.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-config-standard-with-typescript": "43.0.1",
+		"eslint-plugin-import": "2.29.1",
+		"eslint-plugin-n": "16.6.2",
+		"eslint-plugin-promise": "6.1.1",
+		"node-sass": "9.0.0",
+		"nodemon": "3.0.3",
+		"prettier": "3.2.5",
+		"sass": "1.71.0",
+		"typescript": "5.3.3"
+	}
 }

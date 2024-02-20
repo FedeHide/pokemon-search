@@ -5,85 +5,79 @@
 4. visual
 5. others
 */
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin, padding and font */
 /* prevent grid/flex items from spilling out of their container */
 * {
-	margin: 0;
-	padding: 0;
-	min-width: 0;
-	font: inherit;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  font: inherit;
 }
 
 /* dark mode user-agent-styles */
 /* improves punctuation in supported browsers */
 html {
-	font-size: 100%;
-	hanging-punctuation: first last;
-	overflow-x: hidden;
-	// color-scheme: dark light;
+  font-size: 100%;
+  hanging-punctuation: first last;
+  overflow-x: hidden;
 }
 
 /* Set core root defaults */
 html:focus-within {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
-	}
-
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-
 /* Add smooth scroll on targets*/
 @media (prefers-reduced-motion: no-preference) {
-	:has(:target) {
-		// scroll-padding-top: 3rem; //for sticky header or just add space
-		scroll-behavior: smooth;
-	}
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
 }
-
 /* Set core body defaults */
 body {
-	/* Ensure that the body fills the entire viewport. */
-	min-height: 100dvh;
-	line-height: 1.5;
-	text-rendering: optimizeSpeed;
+  /* Ensure that the body fills the entire viewport. */
+  min-height: 100dvh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
 
 /* Remove decoration to anchor elements  */
 a,
 a:visited,
 a:active {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /* Anchor elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Responsive images/videos */
@@ -91,17 +85,17 @@ img,
 picture,
 svg,
 video {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 img {
-	height: auto;
-	vertical-align: middle;
-	font-style: italic;
-	background-repeat: no-repeat;
-	background-size: cover;
-	shape-margin: 0.75rem;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -109,19 +103,19 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 /* spin button off for webkit (chrome, safari) */
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input[type='number'] {
-	-moz-appearance: textfield; /* spin button off for firefox */
-	appearance: textfield; /* standard */
+input[type=number] {
+  -moz-appearance: textfield; /* spin button off for firefox */
+  appearance: textfield; /* standard */
 }
 
 /* Balance headings across multiple lines into an even block */
@@ -131,13 +125,15 @@ h3,
 h4,
 h5,
 h6 {
-	text-wrap: balance;
+  text-wrap: balance;
 }
 
 /* improve readability with max-width on paragraphs and lists */
 /* prevent orphans in supported browsers */
 p,
 li {
-	max-width: 65ch;
-	text-wrap: pretty;
+  max-width: 65ch;
+  text-wrap: pretty;
 }
+
+/*# sourceMappingURL=main.css.map */
