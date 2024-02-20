@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+// calculate REM
+@function calculateRem($size) {
+    $remSize: math.div($size, 16px);
+    @return $remSize * 1rem;
+}
+
+// convert px to em
+@function pxToEm($pixel) {
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + em;
+    } @else {
+        @error "Don't use units when using the pxToEm() function.";
+    }
+}

@@ -1,0 +1,7 @@
+@use 'functions' as *;
+
+$breakpoints: (
+	phone: pxToEm(360),
+	tablet: pxToEm(680),
+	desktop: pxToEm(1120),
+);

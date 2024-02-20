@@ -1,0 +1,35 @@
+@use 'functions' as *;
+@use 'breakpoints' as *;
+
+// font-size
+@mixin font-size($size) {
+	font-size: calculateRem($size);
+}
+
+// clamp font-size
+@mixin clamp-font-size($min-size, $max-size) {
+	font-size: clamp(calculateRem($min-size), 2.5vw + 0.5rem, calculateRem($max-size));
+}
+
+// media queries
+@mixin device($key) {
+	$size: map-get($breakpoints, $key);
+
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+// hover
+@mixin hover {
+	@media screen and (hover: hover) {
+		@content;
+	}
+}
+
+// touch -> active
+@mixin touch {
+	@media screen and (hover: none) {
+		@content;
+	}
+}
