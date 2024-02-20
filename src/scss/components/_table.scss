@@ -1,0 +1,90 @@
+@use '../base/' as *;
+
+.stats {
+	width: 100%;
+	margin: 0 auto 1rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	& th {
+		color: $clr-font-secondary;
+		@include clamp-fs-small(12px, 20px);
+		font-weight: normal;
+		text-align: right;
+	}
+
+	& th,
+	& td {
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: $clr-border;
+		background-color: transparent;
+	}
+
+	& th,
+	& td {
+		padding: 4px 10px;
+	}
+
+	&__cell-num {
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	&__cell-barchart {
+		width: 100%;
+		min-width: 150px;
+	}
+
+	&__barchart-bar {
+		height: 0.75rem;
+		border-radius: 4px;
+		border: 1px solid #737373;
+		border-color: rgba(0, 0, 0, 0.15);
+		background-color: #a3a3a3;
+	}
+
+	& &__cell-first > th:first-child,
+	&__cell-first > td {
+		border-top: 0;
+	}
+
+	&__cell-foot td,
+	&__cell-foot th {
+		border-bottom: 0;
+	}
+}
+
+@include device(tablet) {
+	.stats {
+		max-width: 700px;
+	}
+}
+
+.cell-total {
+	font-weight: bold;
+}
+
+.rank1 {
+	background-color: $clr-rank-1;
+}
+
+.rank2 {
+	background-color: $clr-rank-2;
+}
+
+.rank3 {
+	background-color: $clr-rank-3;
+}
+
+.rank4 {
+	background-color: $clr-rank-4;
+}
+
+.rank5 {
+	background-color: $clr-rank-5;
+}
+
+.rank6 {
+	background-color: $clr-rank-6;
+}
