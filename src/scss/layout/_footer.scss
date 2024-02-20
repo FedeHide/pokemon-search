@@ -1,0 +1,67 @@
+@use '../base/' as *;
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-block: 1.5rem;
+	padding-inline: 1.5rem;
+	@include clamp-fs-small(12px, 20px);
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		color: $clr-font-black;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+		gap: 5px;
+	}
+
+	&__a:visited {
+		color: $clr-font-black;
+	}
+
+	&__a svg {
+		fill: $clr-font-black;
+	}
+
+	@include hover {
+		&__a:hover,
+		&__a:hover svg {
+			color: $clr-primary-hover;
+			fill: $clr-primary-hover;
+		}
+	}
+
+	@include touch {
+		&__a:active,
+		&__a:active svg {
+			color: $clr-primary-hover;
+			fill: $clr-primary-hover;
+		}
+	}
+}
+
+@include device(tablet) {
+	.footer {
+		margin-block: 2.5rem;
+		padding-inline: 4.5rem;
+	}
+}
+
+@include device(desktop) {
+	.footer {
+		margin-block: 3.5rem;
+		padding-inline: 15rem;
+	}
+}
