@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.2.1](https://github.com/FedeHide/pokemon-search/releases/tag/v0.2.1) (2024-02-22)
+
+### Fix
+
+* **hotfix:** OG imgage ([5cc256f](https://github.com/FedeHide/pokemon-search/commit/5cc256f26028bfc4843958da4f0e98692717156d))
+
+### Features
+
+* **add:** explore and add suggestions with arrows ([a8501ba](https://github.com/FedeHide/pokemon-search/commit/a8501ba0e9b5b891d379f66ebbe5630cae2d9f17))
+
+* **add:** now first pokemon letter name is uppercase ([43bf1c6](https://github.com/FedeHide/pokemon-search/commit/43bf1c63bd5d113a030d73a208b6fd0df0f8a051))
+
 ## [v0.1.0](https://github.com/FedeHide/pokemon-search/releases/tag/v0.1.0) (2024-02-21)
 
 ### Features
