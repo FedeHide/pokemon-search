@@ -53,26 +53,68 @@
 		background-color: $clr-primary;
 		cursor: pointer;
 	}
+}
 
-	@include hover {
-		&__btn:hover {
-			background-color: $clr-primary-hover;
-		}
+.dropdown {
+	display: none;
+	width: 30%;
+	border-radius: 5px;
+	background-color: $clr-white;
+	z-index: 101;
+}
 
-		&__btn:hover svg {
-			transition: scale 0.1s ease-in;
-			scale: 1.2;
-		}
+.dropdown ul {
+	width: 100%;
+	border-top: none;
+	list-style-type: none;
+	background-color: $clr-white;
+	border-radius: 5px;
+	color: $clr-font-primary;
+	@include clamp-fs-medium(12px, 16px);
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0.05em;
+	outline: none;
+	overflow: visible;
+	user-select: none;
+	box-shadow: inset 0px 0px 20px -12px rgba(104, 103, 103, 0.75);
+}
+
+.dropdown ul li {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+@include hover {
+	.input-container__btn:hover {
+		background-color: $clr-primary-hover;
 	}
 
-	@include touch {
-		&__btn:active {
-			background-color: $clr-primary-hover;
-		}
-	}
-
-	&__btn:active svg {
+	.input-container__btn:hover svg {
 		transition: scale 0.1s ease-in;
-		scale: 0.9;
+		scale: 1.2;
 	}
+
+	.dropdown ul li:hover {
+		background: linear-gradient(90deg, #89bb85, #19a795);
+		color: $clr-white;
+	}
+}
+
+@include touch {
+	.input-container__btn:active {
+		background-color: $clr-primary-hover;
+	}
+
+	.dropdown ul li:active {
+		background: linear-gradient(90deg, #89bb85, #19a795);
+		color: $clr-white;
+	}
+}
+
+.input-container__btn:active svg {
+	transition: scale 0.1s ease-in;
+	scale: 0.9;
 }
