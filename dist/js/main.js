@@ -91,7 +91,7 @@ async function getPokemon() {
         const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokeNameOrId}`);
         const data = await res.json();
         sprite.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name} sprite">`;
-        pokeNameId.textContent = `${data.name}  #${data.id}`;
+        pokeNameId.textContent = `${data.name.charAt(0).toUpperCase() + data.name.slice(1)}  #${data.id}`;
         pokeTypes.textContent = data.types
             .map((el) => `${el.type.name.toUpperCase()}`)
             .join(' / ');

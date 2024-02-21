@@ -111,7 +111,7 @@ async function getPokemon() {
 		const data = await res.json();
 
 		sprite.innerHTML = `<img src="${data.sprites.front_default}" alt="${data.name} sprite">`;
-		pokeNameId.textContent = `${data.name}  #${data.id}`;
+		pokeNameId.textContent = `${data.name.charAt(0).toUpperCase() + data.name.slice(1)}  #${data.id}`;
 		pokeTypes.textContent = data.types
 			.map((el: pokeType) => `${el.type.name.toUpperCase()}`)
 			.join(' / ');
