@@ -87,6 +87,10 @@
 	cursor: pointer;
 }
 
+.highlight {
+	background: linear-gradient(90deg, #89bb85, #19a795);
+}
+
 @include hover {
 	.input-container__btn:hover {
 		background-color: $clr-primary-hover;

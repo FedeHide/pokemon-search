@@ -29,6 +29,79 @@ interface pokemonDb {
 	name: string;
 }
 
+// filter dropdown
+searchInput.addEventListener('input', async () => {
+	const pokeNameOrId: string = searchInput.value.trim().toLocaleLowerCase();
+	const dbRes: Response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon`);
+	const dbData = await dbRes.json();
+	let suggestionsCount = 0;
+	suggestionsList.innerHTML = '';
+
+	if (pokeNameOrId.length > 0) {
+		dbData.results.forEach((pokemon: pokemonDb) => {
+			if (suggestionsCount < 3 && pokemon.name.startsWith(pokeNameOrId)) {
+				const suggestionItem = document.createElement('li');
+				suggestionItem.textContent = pokemon.name;
+				suggestionItem.classList.add('suggestion');
+				suggestionsCount++;
+
+				suggestionItem.addEventListener('click', () => {
+					searchInput.value = pokemon.name;
+					suggestionsList.innerHTML = '';
+					getPokemon();
+				});
+				suggestionsList.appendChild(suggestionItem);
+			}
+		});
+		dropdown.style.display = 'block';
+		dataContainer.style.marginTop = '2rem';
+	} else {
+		dropdown.style.display = 'none';
+		dataContainer.style.marginTop = '5rem';
+	}
+
+	let suggestionsLi = document.querySelectorAll(
+		'.suggestions-list li',
+	) as NodeListOf<HTMLLIElement>;
+	// navigate suggestions
+	let index = 0;
+	document.addEventListener('keydown', (event) => {
+		switch (event.key) {
+			case 'ArrowDown':
+				if (index === 0 && suggestionsLi.length > 0) {
+					suggestionsLi[index].classList.add('highlight');
+					let selectedValue = suggestionsLi[index].innerText;
+					searchInput.value = selectedValue;
+					index++;
+				} else if (index > 0 && index < suggestionsLi.length) {
+					suggestionsLi[index - 1].classList.remove('highlight');
+					suggestionsLi[index].classList.add('highlight');
+					let selectedValue = suggestionsLi[index].innerText;
+					searchInput.value = selectedValue;
+					index++;
+				}
+				break;
+			case 'ArrowUp':
+				if (index > 1 && index <= suggestionsLi.length) {
+					suggestionsLi[index - 1].classList.remove('highlight');
+					index--;
+					let selectedValue = suggestionsLi[index - 1].innerText;
+					searchInput.value = selectedValue;
+					suggestionsLi[index - 1].classList.add('highlight');
+				} else if (index === 1) {
+					suggestionsLi[index - 1].classList.remove('highlight');
+					index--;
+				}
+				break;
+			case 'Enter':
+				index = 0;
+				break;
+		}
+	});
+	index = 0;
+	suggestionsLi = document.querySelectorAll('.suggestions-list li') as NodeListOf<HTMLLIElement>;
+});
+
 async function getPokemon() {
 	try {
 		const pokeNameOrId: string = searchInput.value.trim().toLocaleLowerCase();
@@ -78,42 +151,10 @@ async function getPokemon() {
 			}
 		}
 	} catch (err) {
-		alert('Pokémon not found');
-		console.log(`Pokémon not found: ${err}`);
+		// alert('Pokémon not found');
+		// console.log(`Pokémon not found: ${err}`);
 	}
 }
-
-// filter dropdown
-searchInput.addEventListener('input', async () => {
-	const pokeNameOrId: string = searchInput.value.trim().toLocaleLowerCase();
-	const dbRes: Response = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon`);
-	const dbData = await dbRes.json();
-	let suggestionsCount = 0;
-	suggestionsList.innerHTML = '';
-
-	if (pokeNameOrId.length > 0) {
-		dbData.results.forEach((pokemon: pokemonDb) => {
-			if (suggestionsCount < 3 && pokemon.name.startsWith(pokeNameOrId)) {
-				const suggestionItem = document.createElement('li');
-				suggestionItem.textContent = pokemon.name;
-				suggestionItem.classList.add('suggestion');
-				suggestionsCount++;
-
-				suggestionItem.addEventListener('click', () => {
-					searchInput.value = pokemon.name;
-					suggestionsList.innerHTML = '';
-					getPokemon();
-				});
-				suggestionsList.appendChild(suggestionItem);
-			}
-		});
-		dropdown.style.display = 'block';
-		dataContainer.style.marginTop = '2rem';
-	} else {
-		dropdown.style.display = 'none';
-		dataContainer.style.marginTop = '5rem';
-	}
-});
 
 // close dropdown when clicks out
 document.addEventListener('click', (event: MouseEvent) => {
@@ -137,6 +178,7 @@ searchBtn.addEventListener('click', getPokemon);
 searchInput.addEventListener('keydown', (e) => {
 	if (e.key === 'Enter') {
 		getPokemon();
+		searchInput.value = '';
 	}
 });
 
@@ -144,4 +186,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 	searchInput.value = 'bulbasaur';
 	getPokemon();
 	searchInput.value = '';
+});
+
+// prevent caret default behavior on key down and up
+searchInput.addEventListener('keydown', function (event) {
+	if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+		event.preventDefault();
+	}
 });

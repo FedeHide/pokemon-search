@@ -396,6 +396,10 @@ li {
   cursor: pointer;
 }
 
+.highlight {
+  background: linear-gradient(90deg, #89bb85, #19a795);
+}
+
 @media screen and (hover: hover) {
   .input-container__btn:hover {
     background-color: hsl(174, 74%, 45%);
