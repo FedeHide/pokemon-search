@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.1.0](https://github.com/FedeHide/pokemon-search/releases/tag/v0.1.0) (yyyy-mm-dd)
+## [v0.1.0](https://github.com/FedeHide/pokemon-search/releases/tag/v0.1.0) (2024-02-21)
 
 ### Features
 
