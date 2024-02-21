@@ -4,7 +4,7 @@
 
 ------------
 
-<!-- [![img.webp](/public/images/img.webp)](/public/images/img.webp) -->
+[![pokemon-search-screenshot.webp](/public/images/pokemon-search-screenshot.webp)](/public/images/pokemon-search-screenshot.webp)
 
 ## Features
 

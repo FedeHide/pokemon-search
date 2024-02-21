@@ -1,7 +1,21 @@
 # Changelog
 
-## [v0.1.0](https://github.com/FedeHide/REPO/releases/tag/v0.1.0) (yyyy-mm-dd)
+## [v0.1.0](https://github.com/FedeHide/pokemon-search/releases/tag/v0.1.0) (yyyy-mm-dd)
 
 ### Features
 
-* **example:** added media queries for responsive ([8681738](commit))
+* **add:** dynamic stat bars, search filter ([72f2e0b](https://github.com/FedeHide/pokemon-search/commit/72f2e0b8bad27ec91826837e1968b4abb65960ff))
+
+* **add:** change html structure, add favicon and screenshot ([5f05c40](https://github.com/FedeHide/pokemon-search/commit/5f05c4045be930608af519c37c812e2beee2fcec))
+
+* **styles:** change middle layout and add content ([641831b](https://github.com/FedeHide/pokemon-search/commit/641831b670fb1f578560d79acd70d9292399270e))
+
+* **add:** main layout styles ([baa0fdf](https://github.com/FedeHide/pokemon-search/commit/baa0fdfa617eed9ffacb8eeea00083bcf546dceb))
+
+* **add:** table and input styles ([ba03d53](https://github.com/FedeHide/pokemon-search/commit/ba03d53aa67ea25dbbe53943ca7a0bda2e2a6737))
+
+* **add:** variables, font ([6c7d743](https://github.com/FedeHide/pokemon-search/commit/6c7d743e3fc6d53231e3bb44a3acaee1bc58cbfe))
+
+* **add:** icons and improve structure on html ([ce1a0b6](https://github.com/FedeHide/pokemon-search/commit/ce1a0b64cd13fc6801ebe33daa61a8853b206369))
+
+* **add:** html base structure ([ed63ab6](https://github.com/FedeHide/pokemon-search/commit/ed63ab6ee3511b60520f3085d42ab2ed6b718ed9))
