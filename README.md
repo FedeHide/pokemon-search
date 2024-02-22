@@ -4,7 +4,7 @@
 
 ------------
 
-[![pokemon-search-screenshot.webp](/public/images/pokemon-search-screenshot.webp)](/public/images/pokemon-search-screenshot.webp)
+[![https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)
 
 ## Features
 
