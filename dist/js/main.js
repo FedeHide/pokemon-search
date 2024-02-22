@@ -148,7 +148,10 @@ searchInput.addEventListener('keydown', (e) => {
         dataContainer.style.marginTop = '5rem';
     }
 });
-searchBtn.addEventListener('click', getPokemon);
+searchBtn.addEventListener('click', () => {
+    getPokemon();
+    searchInput.value = '';
+});
 searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         getPokemon();

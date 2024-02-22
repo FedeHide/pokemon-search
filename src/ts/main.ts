@@ -173,7 +173,10 @@ searchInput.addEventListener('keydown', (e) => {
 });
 
 // enter and click listeners for input
-searchBtn.addEventListener('click', getPokemon);
+searchBtn.addEventListener('click', () => {
+	getPokemon();
+	searchInput.value = '';
+});
 
 searchInput.addEventListener('keydown', (e) => {
 	if (e.key === 'Enter') {
