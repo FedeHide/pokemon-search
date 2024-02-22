@@ -49,6 +49,7 @@ searchInput.addEventListener('input', async () => {
 					searchInput.value = pokemon.name;
 					suggestionsList.innerHTML = '';
 					getPokemon();
+					searchInput.value = '';
 				});
 				suggestionsList.appendChild(suggestionItem);
 			}
