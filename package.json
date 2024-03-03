@@ -1,6 +1,6 @@
 {
 	"name": "pokemon-search",
-	"version": "v0.2.1",
+	"version": "v0.2.2",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint src/ts/**/*.ts",

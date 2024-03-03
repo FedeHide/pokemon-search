@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.2](https://github.com/FedeHide/pokemon-search/releases/tag/v0.2.2) (2024-03-03)
+
+### Fix
+
+* **hotfix:** stat bar colors no longer stack between requests ([4b9d35d](https://github.com/FedeHide/pokemon-search/commit/4b9d35dea262d1a21f3e0cf5d520daa0ed63091b))
+
+* **hotfix:** clean input on touch ([b7a300b](https://github.com/FedeHide/pokemon-search/commit/b7a300bce9645294f39747ebefde760b86bf30ff))
+
 ## [v0.2.1](https://github.com/FedeHide/pokemon-search/releases/tag/v0.2.1) (2024-02-22)
 
 ### Fix
