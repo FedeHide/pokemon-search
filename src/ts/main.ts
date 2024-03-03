@@ -119,6 +119,12 @@ async function getPokemon() {
 		pokeWeight.textContent = `${data.weight / 10}Kg`;
 		pokeHeight.textContent = `${data.height / 10}m`;
 
+		//clean statbars
+		statBars.forEach((el) => {
+			el.classList.remove('rank1', 'rank2', 'rank3', 'rank4', 'rank5', 'rank6');
+			el.style.width = '0';
+		});
+
 		//set stats
 		pokeHp.textContent = data.stats[0].base_stat;
 		pokeAttack.textContent = data.stats[1].base_stat;
@@ -152,8 +158,8 @@ async function getPokemon() {
 			}
 		}
 	} catch (err) {
-		// alert('Pokémon not found');
-		// console.log(`Pokémon not found: ${err}`);
+		alert('Pokémon not found');
+		console.log(`Pokémon not found: ${err}`);
 	}
 }
 
