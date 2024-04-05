@@ -2,6 +2,17 @@
 
 ### Check the site [Here](https://fedehide.github.io/pokemon-search " Pokemon Search")
 
+## Introduction
+This is a Pokemon Search app, a freecodecamp assignment.
+
+## Technologies Used
+<div>
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=ts,sass,html" />
+	</a>
+</div>
+
+
 ------------
 
 [![https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)
