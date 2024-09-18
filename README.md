@@ -15,7 +15,7 @@ This is a Pokemon Search app, a freecodecamp assignment.
 
 ------------
 
-[![https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)
+[![https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp](https://raw.githubusercontent.com/FedeHide/pokemon-search/main/public/images/pokemon-search-screenshot.webp)](https://fedehide.github.io/pokemon-search)
 
 ## Features
 
